@@ -40,7 +40,7 @@ https://user-images.githubusercontent.com/2526362/155355671-dc235f97-d25d-4727-9
 
 | Platform | Minimum Swift Version | Installation | Status |
 | --- | --- | --- | --- |
-| Firebase iOS SDK | Latest Only | [Swift Package Manager](#swift-package-manager) | Building But Unsupported |
+| Firebase iOS SDK | Latest Only | [Swift Package Manager](#swift-package-manager) |  |
 
 https://github.com/firebase/firebase-ios-sdk
 
