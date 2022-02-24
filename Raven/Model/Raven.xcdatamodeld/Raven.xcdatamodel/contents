@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<model type="com.apple.IDECoreDataModeler.DataModel" documentVersion="1.0" lastSavedToolsVersion="19461" systemVersion="20G165" minimumToolsVersion="Automatic" sourceLanguage="Swift" userDefinedModelVersionIdentifier="">
+    <entity name="VideoGroup" representedClassName="VideoGroup" syncable="YES" codeGenerationType="class">
+        <attribute name="creationDate" optional="YES" attributeType="Date" usesScalarValueType="NO"/>
+        <attribute name="name" optional="YES" attributeType="String"/>
+        <relationship name="videoList" optional="YES" toMany="YES" deletionRule="Cascade" destinationEntity="VideoList" inverseName="videoGroup" inverseEntity="VideoList"/>
+    </entity>
+    <entity name="VideoList" representedClassName="VideoList" syncable="YES" codeGenerationType="class">
+        <attribute name="channelTitle" optional="YES" attributeType="String"/>
+        <attribute name="creationDate" optional="YES" attributeType="Date" usesScalarValueType="NO"/>
+        <attribute name="id" optional="YES" attributeType="String"/>
+        <attribute name="publishTime" optional="YES" attributeType="String"/>
+        <attribute name="thumbnail" optional="YES" attributeType="String"/>
+        <attribute name="title" optional="YES" attributeType="String"/>
+        <relationship name="videoGroup" optional="YES" maxCount="1" deletionRule="Nullify" destinationEntity="VideoGroup" inverseName="videoList" inverseEntity="VideoGroup"/>
+        <relationship name="videoStats" optional="YES" toMany="YES" deletionRule="Nullify" destinationEntity="VideoStats" inverseName="list2" inverseEntity="VideoStats"/>
+    </entity>
+    <entity name="VideoStats" representedClassName="VideoStats" syncable="YES" codeGenerationType="class">
+        <attribute name="commentCount" optional="YES" attributeType="String"/>
+        <attribute name="creationDate" optional="YES" attributeType="Date" usesScalarValueType="NO"/>
+        <attribute name="id" optional="YES" attributeType="String"/>
+        <attribute name="likeCount" optional="YES" attributeType="String"/>
+        <attribute name="viewCount" optional="YES" attributeType="String"/>
+        <relationship name="list2" optional="YES" maxCount="1" deletionRule="Nullify" destinationEntity="VideoList" inverseName="videoStats" inverseEntity="VideoList"/>
+    </entity>
+    <elements>
+        <element name="VideoGroup" positionX="-466.1929321289063" positionY="-162.135986328125" width="128" height="88"/>
+        <element name="VideoList" positionX="-49.73004150390619" positionY="10.45013427734375" width="128" height="149"/>
+        <element name="VideoStats" positionX="325.5003662109375" positionY="89.8372802734375" width="128" height="119"/>
+    </elements>
+</model>
